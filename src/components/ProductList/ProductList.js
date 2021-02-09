@@ -10,7 +10,9 @@ import ProductShowcase from '../ProductShowcase/ProductShowcase';
 import { Container } from '../../styles/globalStyles';
 
 const ProductList = () => {
-  const product = products.map(product => <ProductShowcase {...product} />);
+  const product = products.map(product => (
+    <ProductShowcase key={product.id} {...product} />
+  ));
 
   return (
     <ProductListContainer>

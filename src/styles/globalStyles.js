@@ -23,6 +23,7 @@ display: flex;
 align-items: center;
 justify-content: ${({ isCenter }) => isCenter ? 'center' : 'space-between'};
 flex-direction: ${({ isColumn }) => isColumn ? 'column' : 'row'};
+flex-shrink: 1;
 `
 
 export default GlobalStyle;

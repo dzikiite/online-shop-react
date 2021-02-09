@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
 
 import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/cart" component={CartPage} />
         <Route path="/contact" component={ContactPage} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

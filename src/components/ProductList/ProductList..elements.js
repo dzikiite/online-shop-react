@@ -12,7 +12,20 @@ export const Title = styled.h2`
   font-size: 2rem;
   font-weight: ${typography.fontWeightBold};
   text-transform: uppercase;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem 0;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 5px;
+    background-color: ${colors.lighterBlue};
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 export const ProductsList = styled.div`
