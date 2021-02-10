@@ -23,6 +23,16 @@ export const sizes = {
     phone: 576,
 };
 
+export const zIndex = {
+  level1: 100,
+  level2: 200,
+  level3: 300,
+  level4: 400,
+  level5: 500,
+  level6: 600,
+  level7: 700,
+}
+
 export const media = Object.keys(sizes).reduce((acc, label) => {
     acc[label] = (...args) => css`
       @media (min-width: ${sizes[label]}px) {

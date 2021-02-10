@@ -1,5 +1,6 @@
 import React from 'react';
 import { RatesStar } from '../components/ProductRates/ProductRates.elements';
+import { USD, USD_TO_EUR } from '../utils/consts';
 
 export const getStars = rate => {
   const stars = [];
@@ -9,3 +10,11 @@ export const getStars = rate => {
   }
   return stars;
 };
+
+export const getConversionPrice = (actualCurrency, price) => {
+  if (actualCurrency === USD) {
+    return price;
+  } else {
+    return Math.floor(price * USD_TO_EUR);
+  }
+}

@@ -47,6 +47,7 @@ export const Currency = styled.p`
   text-transform: uppercase;
   font-weight: ${typography.fontWeightMedium};
   cursor: pointer;
+  position: relative;
 `;
 
 export const CurrencyArrow = styled(IoMdArrowDropdown)`
