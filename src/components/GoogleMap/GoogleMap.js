@@ -1,6 +1,5 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import { API_KEY } from '../../utils/consts';
 
 import { GoogleMapContainer, GoogleMapMarker } from './GoogleMap.elements';
 
@@ -16,7 +15,7 @@ const GoogleMap = () => {
   return (
     <GoogleMapContainer>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: API_KEY }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEMAP_API_KEY }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}>
         <GoogleMapMarker
