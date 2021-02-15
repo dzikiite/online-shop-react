@@ -76,7 +76,9 @@ export const ShopCartIcon = styled(BiCart)`
   cursor: pointer;
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+cursor: pointer;
+`;
 
 export const Menu = styled.nav`
   display: flex;

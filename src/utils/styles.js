@@ -8,6 +8,7 @@ export const colors = {
     dark: '#22262A',
     light: '#FFFFFF',
     lightGray: '#F6F6F6',
+    green: '#59ED98',
 };
 
 export const typography = {

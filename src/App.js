@@ -7,6 +7,7 @@ import { store } from './store/store';
 import CartPage from './pages/CartPage/CartPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
+import SingleProductPage from './pages/SingleProductPage/SingleProductPage';
 
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/cart" component={CartPage} />
           <Route path="/contact" component={ContactPage} />
+          <Route path="/:slug" component={SingleProductPage} />
         </Switch>
         <Footer />
       </Router>

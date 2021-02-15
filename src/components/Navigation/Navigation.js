@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { USD, EUR } from '../../utils/consts';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import {
   NavigationContainer,
@@ -28,11 +29,13 @@ const menuContent = [
 
 const Navigation = () => {
   const [isCurrencySwitcherOpen, setIsCurrencySwitcherOpen] = useState(false);
-
+  const history = useHistory();
   const currency = useSelector(store => store.global.currency);
 
   const handleOpenCurrencyMenu = () =>
     setIsCurrencySwitcherOpen(prevValue => !prevValue);
+  
+  const handleHomeRedirect = () => history.push('/');
 
   return (
     <NavigationContainer>
@@ -52,7 +55,7 @@ const Navigation = () => {
           </UserMenu>
         </NavigationTop>
         <NavigationBottom>
-          <Logo src={logo} />
+          <Logo src={logo} onClick={handleHomeRedirect} />
           <Menu>
             {menuContent.map(item => (
               <MenuItem key={item.title} exact to={item.path}>

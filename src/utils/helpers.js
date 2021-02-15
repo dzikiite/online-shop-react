@@ -17,4 +17,11 @@ export const getConversionPrice = (actualCurrency, price) => {
   } else {
     return Math.floor(price * USD_TO_EUR);
   }
-}
+};
+
+export const getProductSlug = title => {
+  return title
+    .toLowerCase()
+    .replace(/[^\w ]+/g, '')
+    .replace(/ +/g, '-');
+};
